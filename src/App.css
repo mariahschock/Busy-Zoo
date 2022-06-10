@@ -52,12 +52,14 @@ body {
   padding: 20px;
 }
 h3 {
+  font-family: fantasy;
   margin: 20px;
   color:gold;
   background-color:rgba(175, 170, 170, 0.64);
 }
 h1 {
   color: rgb(235, 231, 220);
+  font-family: fantasy;
   text-shadow: 2px solid black;
   background-color: rgba(175, 170, 170, 0.67);
 }
@@ -66,4 +68,11 @@ h1 {
   flex-direction: row;
   background-color: rgba(175, 170, 170, 0.67);
   font-size: 3rem;
+}
+button {
+  border-radius: 10px;
+  font-family: fantasy;
+}
+button:hover {
+  opacity: .75;
 }
