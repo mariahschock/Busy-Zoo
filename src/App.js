@@ -1,22 +1,23 @@
-import logo from './logo.svg';
+import useState from 'react';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className="circus">
+          <div className="star">
+            <img src="Lion.jpg"></img>
+            <button>Grow Lion</button>
+            <button>Shrink Lion</button>
+          </div>
+          <div className="star">
+            <img src="Elephant.jpg"></img>
+            <button>Grow Elephant</button>
+            <button>Shrink Elephant</button>
+          </div>
+        </div>
+          
       </header>
     </div>
   );
