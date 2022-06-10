@@ -1,6 +1,6 @@
 body {
   background-image: url("./Background.png");
-  background-size: cover;
+  background-size: cover; background-repeat: no-repeat;
 }
 
 .App {
@@ -44,9 +44,20 @@ body {
   display:flex;
   flex-direction:row;
   justify-content: space-around;
+  margin: 100px;
 }
 .star {
   display:flex;
   flex-direction: column;
   padding: 20px;
+}
+h3 {
+  margin: 20px;
+  color:gold;
+  background-color:rgba(175, 170, 170, 0.64);
+}
+h1 {
+  color: rgb(235, 231, 220);
+  text-shadow: 2px solid black;
+  background-color: rgba(175, 170, 170, 0.67);
 }
