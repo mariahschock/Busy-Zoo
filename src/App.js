@@ -1,12 +1,31 @@
 import { useState } from 'react';
 import './App.css';
 import Sign from './Sign';
+import AnimalList from './AnimalList';
 
 function App() {
 
   const [lionSize, setLionSize] = useState(25);
   const [elephantSize, setElephantSize] = useState(25);
   const [circusIsOpen, setCircusIsOpen] = useState(true);
+  const [animals, setAnimals] = useState(['tiger', 'zebra', 'giraffe', 'rhino']);
+
+  function handleTigerClick() {
+    animals.push('tiger');
+    setAnimals(animals.slice());
+  }
+  function handleZebraClick() {
+    animals.push('zebra');
+    setAnimals(animals.slice());
+  }
+  function handleGiraffeClick() {
+    animals.push('giraffe');
+    setAnimals(animals.slice());
+  }
+  function handleRhinoClick() {
+    animals.push('rhino');
+    setAnimals(animals.slice());
+  }
 
   return (
     <div className="App">
@@ -26,7 +45,13 @@ function App() {
             <button onClick={() => setElephantSize(elephantSize - 5)}>Shrink Elephant</button>
           </div>
         </div>
-          
+        <AnimalList animals={animals} />  
+        <div className="buttons">
+          <button onClick={() => handleTigerClick('tiger')}>Tiger</button>
+          <button onClick={() => handleZebraClick('zebra')}>Zebra</button>
+          <button onClick={() => handleGiraffeClick('giraffe')}>Giraffe</button>
+          <button onClick={() => handleRhinoClick('rhino')}>Rhino</button>
+        </div>
       </header>
     </div>
   );

@@ -1,7 +1,12 @@
 import React from 'react';
+import AnimalData from './AnimalData';
 
-export default function AnimalList() {
+export default function AnimalList({ animals }) {
   return (
-    <div>AnimalList</div>
+    <div className="animals">
+      {
+        animals.map((animal, i) => <AnimalData key={animal + i} animal={animal} />) 
+      }
+    </div>
   );
 }

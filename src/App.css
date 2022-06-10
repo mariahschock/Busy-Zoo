@@ -61,3 +61,7 @@ h1 {
   text-shadow: 2px solid black;
   background-color: rgba(175, 170, 170, 0.67);
 }
+.animals {
+  display: flex;
+  flex-direction: row;
+}

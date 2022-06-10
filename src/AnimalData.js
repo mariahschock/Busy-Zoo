@@ -1,7 +1,12 @@
 import React from 'react';
 
-export default function AnimalData() {
+export default function AnimalData({ animal }) {
   return (
-    <div>AnimalData</div>
+    <div className="animal">
+      {animal === 'tiger' && '🐅'}
+      {animal === 'zebra' && '🦓'}
+      {animal === 'giraffe' && '🦒'}
+      {animal === 'rhino' && '🦏'}
+    </div>
   );
 }
