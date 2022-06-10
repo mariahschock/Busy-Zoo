@@ -26,6 +26,10 @@ function App() {
     animals.push('rhino');
     setAnimals(animals.slice());
   }
+  function handleRemoveAnimal() {
+    animals.pop();
+    setAnimals(animals.slice());
+  }
 
   return (
     <div className="App">
@@ -51,6 +55,7 @@ function App() {
           <button onClick={() => handleZebraClick('zebra')}>Zebra</button>
           <button onClick={() => handleGiraffeClick('giraffe')}>Giraffe</button>
           <button onClick={() => handleRhinoClick('rhino')}>Rhino</button>
+          <button onClick={handleRemoveAnimal}>Remove Last Animal</button>
         </div>
       </header>
     </div>
