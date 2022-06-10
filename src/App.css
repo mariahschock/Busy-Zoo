@@ -1,3 +1,8 @@
+body {
+  background-image: url("./Background.png");
+  background-size: cover; background-repeat: no-repeat;
+}
+
 .App {
   text-align: center;
 }
@@ -14,7 +19,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +39,40 @@
   to {
     transform: rotate(360deg);
   }
+}
+.circus {
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  margin: 100px;
+}
+.star {
+  display:flex;
+  flex-direction: column;
+  padding: 20px;
+}
+h3 {
+  font-family: fantasy;
+  margin: 20px;
+  color:gold;
+  background-color:rgba(175, 170, 170, 0.64);
+}
+h1 {
+  color: rgb(235, 231, 220);
+  font-family: fantasy;
+  text-shadow: 2px solid black;
+  background-color: rgba(175, 170, 170, 0.67);
+}
+.animals {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(175, 170, 170, 0.67);
+  font-size: 3rem;
+}
+button {
+  border-radius: 10px;
+  font-family: fantasy;
+}
+button:hover {
+  opacity: .75;
 }

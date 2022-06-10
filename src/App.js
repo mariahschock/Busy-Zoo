@@ -1,22 +1,64 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Sign from './Sign';
+import AnimalList from './AnimalList';
+import Music from './Music';
 
 function App() {
+
+  const [lionSize, setLionSize] = useState(20);
+  const [elephantSize, setElephantSize] = useState(20);
+  const [circusIsOpen, setCircusIsOpen] = useState(true);
+  const [animals, setAnimals] = useState(['tiger', 'zebra', 'giraffe', 'rhino']);
+
+  function handleTigerClick() {
+    animals.push('tiger');
+    setAnimals(animals.slice());
+  }
+  function handleZebraClick() {
+    animals.push('zebra');
+    setAnimals(animals.slice());
+  }
+  function handleGiraffeClick() {
+    animals.push('giraffe');
+    setAnimals(animals.slice());
+  }
+  function handleRhinoClick() {
+    animals.push('rhino');
+    setAnimals(animals.slice());
+  }
+  function handleRemoveAnimal() {
+    animals.pop();
+    setAnimals(animals.slice());
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Welcome to the Circus!!</h1>
+        <Sign circusIsOpen={circusIsOpen} />
+        <button onClick={() => setCircusIsOpen(!circusIsOpen)}>Open/Close Sign</button>
+        <Music />
+        <div className="circus">
+          <div className="star">
+            <img src="Lion.png" style={{ width: `${lionSize * 10 }px` }}></img>
+            <button onClick={() => setLionSize(lionSize + 5)}>Grow Lion</button>
+            <button onClick={() => setLionSize(lionSize - 5)}>Shrink Lion</button>
+          </div>
+          <div className="star">
+            <img src="Elephant.png" style={{ width: `${elephantSize * 10 }px` }}></img>
+            <button onClick={() => setElephantSize(elephantSize + 5)}>Grow Elephant</button>
+            <button onClick={() => setElephantSize(elephantSize - 5)}>Shrink Elephant</button>
+          </div>
+        </div>
+        <AnimalList animals={animals} />  
+        <div className="buttons">
+          <button onClick={() => handleTigerClick('tiger')}>Tiger</button>
+          <button onClick={() => handleZebraClick('zebra')}>Zebra</button>
+          <button onClick={() => handleGiraffeClick('giraffe')}>Giraffe</button>
+          <button onClick={() => handleRhinoClick('rhino')}>Rhino</button>
+          <button onClick={handleRemoveAnimal}>Remove Last Animal</button>
+        </div>
       </header>
     </div>
   );
