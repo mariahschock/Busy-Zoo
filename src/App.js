@@ -3,6 +3,7 @@ import './App.css';
 import Sign from './Sign';
 import AnimalList from './AnimalList';
 import Music from './Music';
+import CustomButton, { AnotherButton, SignButton } from './CustomButton';
 
 function App() {
 
@@ -37,27 +38,27 @@ function App() {
       <header className="App-header">
         <h1>Welcome to the Circus!!</h1>
         <Sign circusIsOpen={circusIsOpen} />
-        <button onClick={() => setCircusIsOpen(!circusIsOpen)}>Open/Close Sign</button>
+        <SignButton onClick={() => setCircusIsOpen(!circusIsOpen)}>Open/Close Sign</SignButton>
         <Music />
         <div className="circus">
           <div className="star">
             <img src="Lion.png" style={{ width: `${lionSize * 10 }px` }}></img>
-            <button onClick={() => setLionSize(lionSize + 5)}>Grow Lion</button>
-            <button onClick={() => setLionSize(lionSize - 5)}>Shrink Lion</button>
+            <CustomButton onClick={() => setLionSize(lionSize + 5)}>Grow Lion</CustomButton>
+            <CustomButton onClick={() => setLionSize(lionSize - 5)}>Shrink Lion</CustomButton>
           </div>
           <div className="star">
             <img src="Elephant.png" style={{ width: `${elephantSize * 10 }px` }}></img>
-            <button onClick={() => setElephantSize(elephantSize + 5)}>Grow Elephant</button>
-            <button onClick={() => setElephantSize(elephantSize - 5)}>Shrink Elephant</button>
+            <CustomButton onClick={() => setElephantSize(elephantSize + 5)}>Grow Elephant</CustomButton>
+            <CustomButton onClick={() => setElephantSize(elephantSize - 5)}>Shrink Elephant</CustomButton>
           </div>
         </div>
         <AnimalList animals={animals} />  
         <div className="buttons">
-          <button onClick={() => handleTigerClick('tiger')}>Tiger</button>
-          <button onClick={() => handleZebraClick('zebra')}>Zebra</button>
-          <button onClick={() => handleGiraffeClick('giraffe')}>Giraffe</button>
-          <button onClick={() => handleRhinoClick('rhino')}>Rhino</button>
-          <button onClick={handleRemoveAnimal}>Remove Last Animal</button>
+          <AnotherButton onClick={() => handleTigerClick('tiger')}>Tiger</AnotherButton>
+          <AnotherButton onClick={() => handleZebraClick('zebra')}>Zebra</AnotherButton>
+          <AnotherButton onClick={() => handleGiraffeClick('giraffe')}>Giraffe</AnotherButton>
+          <AnotherButton onClick={() => handleRhinoClick('rhino')}>Rhino</AnotherButton>
+          <AnotherButton onClick={handleRemoveAnimal}>Remove Last Animal</AnotherButton>
         </div>
       </header>
     </div>
