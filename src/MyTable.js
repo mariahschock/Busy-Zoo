@@ -16,10 +16,11 @@ export default function MyTable() {
           ]
         }
         data={customers}
-        title="Title"
+        title="Customer Info"
         options={{
           headerStyle: {
-            background: 'lemonchiffron',
+            background: 'rosybrown',
+            border: 'solid 2px black'
 
           },
           rowStyle: {

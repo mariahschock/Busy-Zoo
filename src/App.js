@@ -13,6 +13,7 @@ export default function App() {
   return (
     <Router>
       <nav>
+        <Link to="/">Home Page</Link>
         <Link to="/Admin">Admin Page</Link>
       </nav>
       <Switch>
