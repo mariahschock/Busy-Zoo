@@ -1,5 +1,5 @@
 import React from 'react';
-import { VictoryLine, VictoryChart, VictoryAxis, VictoryPie, VictoryLabel } from 'victory';
+import { VictoryLine, VictoryChart, VictoryAxis, VictoryPie } from 'victory';
 
 const data = [
   { time: 1, awakeness: 8 },
